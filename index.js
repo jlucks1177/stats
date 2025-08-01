@@ -3,7 +3,7 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  return numbers.length;
 }
 
 /**
@@ -11,7 +11,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let total = 0;
+  for (let i = 0; i < numbers.length; ++i) {
+    total += numbers[i];
+  }
+  return total;
 }
 
 /**
@@ -19,7 +23,11 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let total = 0;
+  for (let i = 0; i < numbers.length; ++i) {
+    total += numbers[i];
+  }
+  return total / numbers.length;
 }
 
 /**
@@ -27,7 +35,13 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let smallest = numbers[0];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] < smallest) {
+      smallest = numbers[i];
+    }
+  }
+  return smallest;
 }
 
 /**
@@ -35,7 +49,13 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let largest = numbers[0];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+  return largest;
 }
 
 /**
@@ -43,7 +63,10 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  const largest = getMax(numbers);
+  const smallest = getMin(numbers);
+  const range = largest - smallest;
+  return range;
 }
 
 /**
@@ -51,7 +74,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  const evens = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] % 2 === 0) {
+      evens.push(numbers[i]);
+    }
+  }
+  return evens;
 }
 
 /**
@@ -59,7 +88,13 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  const odds = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] % 2 !== 0) {
+      odds.push(numbers[i]);
+    }
+  }
+  return odds;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
